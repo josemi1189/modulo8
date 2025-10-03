@@ -125,57 +125,21 @@ export const muestraDatosPacientes = (contenedor:string, pacientes:Pacientes[]) 
          
       }  
    }
+};
 
+/**
+ * Muestra div con texto y formato indicado según parámetros.
+ * @param mensaje String a mostrar
+ * @param clase Clase CSS (danger | warning | success)
+ */
+export const muestraMensaje = (panelMensajes:string, mensaje:string, clase:string):void => {
+   const capaMensaje = document.getElementById(panelMensajes);
 
-
-
-
-
-/*
-      let divColLabels = creaDiv("col-labels");
-      // Título de los datos mostrados del paciente
-      if (capaPaciente && capaPaciente instanceof HTMLDivElement
-         && divColLabels && divColLabels instanceof HTMLDivElement) {
-            for (let i=0; i < datosPaciente.length; i++) {
-               let titDatos = creaDiv("tit-datos",datosPaciente[i]);
-               if (titDatos && titDatos instanceof HTMLDivElement) {
-                  divColLabels.appendChild(titDatos);
-               }
-            }
-            if (divContenedor && divContenedor instanceof HTMLDivElement) {
-                  capaPaciente.appendChild(divColLabels);
-                  divContenedor.appendChild(capaPaciente);
-            }
-      }
-
-      let divColDatos = creaDiv("col-datos");
-      // Datos del paciente
-      if (capaPaciente && capaPaciente instanceof HTMLDivElement
-         && divColDatos && divColDatos instanceof HTMLDivElement) {
-            
-         let nombre = creaDiv("datos-nombre",pacientes[i].nombre);
-         (nombre && nombre instanceof HTMLDivElement) && divColDatos.appendChild(nombre);
-            
-         if (divContenedor && divContenedor instanceof HTMLDivElement
-            ) {
-               capaPaciente.appendChild(divColDatos);
-               divContenedor.appendChild(capaPaciente);
-         }
-      }*/
+   if ( capaMensaje && capaMensaje instanceof HTMLDivElement ) {
+      capaMensaje.classList.add(clase);
+      capaMensaje.innerHTML = mensaje.toString();
    }
-   /*
-
-   if (divContenedor && divContenedor instanceof HTMLDivElement &&
-      capaPaciente && capaPaciente instanceof HTMLDivElement &&
-      capaNombres && capaNombres instanceof HTMLDivElement &&
-      capaDatosPaciente && capaDatosPaciente instanceof HTMLDivElement &&) { 
-      
-         divContenedor.appendChild(capaPaciente);
-         creaDiv("fila-dato","Nombre")
-         capaPaciente.appendChild();
-
-
-   }   */
+}
 
 
 

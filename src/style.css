@@ -3,15 +3,20 @@
     
     --fuenteColor: #ffffff;
     --sombra: #858585;
+    --alertDanger: #F8D7DA;
+    --alertWarning: #FFF3CD;
+    --alertSuccess: #D1E7DD;
 }
 
 body {
   min-width: 320px;
   min-height: 100vh;
+  padding: 1.5rem 3rem;
 }
 #container {
   width: 100%;
   margin: 0 auto;
+  margin-bottom: 50px;
 }
 /* MODIFICACIÓN INICIA AQUÍ */
 .ejercicio {
@@ -45,6 +50,25 @@ body {
       margin-right: 0.5em;
     }
   }
+}
+.danger, .warning, .success {
+  width: 300px;
+  text-align: center;
+  font-weight: 600;
+  padding: 10px 0;
+  box-shadow: 0px 1px 5px 0 var(--sombra);
+}
+
+.danger {
+  background-color: var(--alertDanger);
+  
+
+}
+.warning {
+  background-color: var(--alertWarning);
+}
+.success {
+  background-color: var(--alertSuccess);
 }
 
 

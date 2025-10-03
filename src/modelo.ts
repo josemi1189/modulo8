@@ -10,3 +10,9 @@ export interface Pacientes {
   especialidad: Especialidad;
   edad: number;
 }
+
+export interface NumeroPacientesPorEspecialidad {
+  medicoDeFamilia: number;
+  pediatria: number;
+  cardiologia: number;
+}
