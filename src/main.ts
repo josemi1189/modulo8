@@ -1,3 +1,6 @@
 import "./style.css";
+import { principal } from "./controller/motor";
 
-console.log("Hello Typescript!");
+document.addEventListener("DOMContentLoaded", () => { principal(); });
+
+

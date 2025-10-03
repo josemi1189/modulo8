@@ -1,3 +1,72 @@
+* {
+    box-sizing: border-box;
+    
+    --fuenteColor: #ffffff;
+    --sombra: #858585;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+}
+#container {
+  width: 100%;
+  margin: 0 auto;
+}
+/* MODIFICACIÓN INICIA AQUÍ */
+.ejercicio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+  gap: 5px;  
+}
+
+
+.paciente {
+  display: grid;
+  gap: 5px;
+  border-radius: 10px;
+  box-shadow: 0px 1px 5px 0 var(--sombra);
+  max-width: 380px;
+  padding: 0.8em;
+
+  .nombre {
+    text-align: center;
+    font-weight: 800;
+    font-size: 18px;
+  }
+  .row {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+
+    .label {
+      text-align: right;
+      font-weight: 700;
+      margin-right: 0.5em;
+    }
+  }
+}
+
+
+/*
+.paciente > div:nth-child(1) {
+  grid-area: tit;
+  
+}
+.paciente > div:nth-child(2) {
+  grid-area: datos;
+}  */
+
+/*
+.paciente div:nth-child(1) {
+  float: left;
+}
+
+.paciente div:nth-child(2) {
+  float: right;
+}*/
+
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -23,13 +92,7 @@ a:hover {
   color: #535bf2;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
+
 
 h1 {
   font-size: 3.2em;
